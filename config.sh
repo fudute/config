@@ -4,6 +4,7 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 # 安装docker
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh --mirror Aliyun
+
 # 添加用户'ubuntu' 到 docker用户组
 sudo usermod -aG docker ubuntu
 echo "请重新登录使新增用户组生效"
@@ -26,3 +27,9 @@ minikube start --image-mirror-country='cn' --logtostderr
 wget https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.17.7.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.zshrc && source .zshrc
+go env -w GOPROXY=https://goproxy.cn,direct
+
+# vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+

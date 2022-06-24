@@ -21,7 +21,7 @@ echo 'source <(minikube completion zsh)' >> $HOME/.zshrc
 echo 'source <(minikube kubectl zsh)' >> $HOME/.zshrc
 
 # 运行minikube
-minikube start --image-mirror-country='cn' --logtostderr
+# minikube start --image-mirror-country='cn' --logtostderr
 
 # 安装golang
 wget https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz

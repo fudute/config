@@ -6,6 +6,9 @@ set nocompatible
 
 " plug
 call plug#begin()
+" Plug 'itchyny/lightline.vim'
+Plug 'preservim/tagbar'
+
 Plug 'cdelledonne/vim-cmake'
 Plug 'puremourning/vimspector'
 
@@ -18,6 +21,7 @@ Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'tomasiser/vim-code-dark'
 
+" go
 Plug 'fatih/vim-go'
 Plug 'buoto/gotests-vim'	
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -34,12 +38,24 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 
 Plug 'alvan/vim-closetag'
+
+" cpp highlight
+Plug 'bfrg/vim-cpp-modern'
+
+Plug 'MattesGroeger/vim-bookmarks'
+
 call plug#end()
 
 colorscheme codedark
+
+" git-gutter
+nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghp <Plug>(GitGutterPreviewHunk)
 
 " nerdtree
 nnoremap <c-e> :NERDTreeToggle<Enter>
@@ -311,7 +327,6 @@ let g:closetag_shortcut = '>'
 " Add > at current position without closing the current tag, default is ''
 "
 let g:closetag_close_shortcut = '<leader>>'
-
 
 
 " show existing tab with 4 spaces width
